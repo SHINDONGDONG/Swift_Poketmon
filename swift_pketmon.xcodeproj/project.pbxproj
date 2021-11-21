@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		9B13F275274705A10070B866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13F274274705A10070B866 /* AppDelegate.swift */; };
 		9B13F277274705A10070B866 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13F276274705A10070B866 /* SceneDelegate.swift */; };
-		9B13F279274705A10070B866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13F278274705A10070B866 /* ViewController.swift */; };
 		9B13F27C274705A10070B866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B13F27A274705A10070B866 /* Main.storyboard */; };
 		9B13F27E274705A20070B866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B13F27D274705A20070B866 /* Assets.xcassets */; };
 		9B13F281274705A20070B866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B13F27F274705A20070B866 /* LaunchScreen.storyboard */; };
+		9B13F28A274707550070B866 /* PoketBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13F289274707550070B866 /* PoketBookController.swift */; };
+		9B24574E2749CEA100D76DAC /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24574D2749CEA100D76DAC /* Extenstions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B13F271274705A10070B866 /* swift_pketmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_pketmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B13F274274705A10070B866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B13F276274705A10070B866 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B13F278274705A10070B866 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B13F27B274705A10070B866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B13F27D274705A20070B866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B13F280274705A20070B866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B13F282274705A20070B866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B13F289274707550070B866 /* PoketBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoketBookController.swift; sourceTree = "<group>"; };
+		9B24574D2749CEA100D76DAC /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		9B13F273274705A10070B866 /* swift_pketmon */ = {
 			isa = PBXGroup;
 			children = (
+				9B24574C2749CE8600D76DAC /* Utils */,
+				9B13F288274706EC0070B866 /* Controllers */,
 				9B13F274274705A10070B866 /* AppDelegate.swift */,
 				9B13F276274705A10070B866 /* SceneDelegate.swift */,
-				9B13F278274705A10070B866 /* ViewController.swift */,
 				9B13F27A274705A10070B866 /* Main.storyboard */,
 				9B13F27D274705A20070B866 /* Assets.xcassets */,
 				9B13F27F274705A20070B866 /* LaunchScreen.storyboard */,
 				9B13F282274705A20070B866 /* Info.plist */,
 			);
 			path = swift_pketmon;
+			sourceTree = "<group>";
+		};
+		9B13F288274706EC0070B866 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B13F289274707550070B866 /* PoketBookController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9B24574C2749CE8600D76DAC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B24574D2749CEA100D76DAC /* Extenstions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B13F279274705A10070B866 /* ViewController.swift in Sources */,
+				9B24574E2749CEA100D76DAC /* Extenstions.swift in Sources */,
+				9B13F28A274707550070B866 /* PoketBookController.swift in Sources */,
 				9B13F275274705A10070B866 /* AppDelegate.swift in Sources */,
 				9B13F277274705A10070B866 /* SceneDelegate.swift in Sources */,
 			);
@@ -217,7 +237,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,7 +314,6 @@
 				INFOPLIST_FILE = swift_pketmon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +325,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +341,6 @@
 				INFOPLIST_FILE = swift_pketmon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

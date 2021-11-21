@@ -16,7 +16,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+            guard let windowScen = (scene as? UIWindowScene) else { return }
+  
+//        let window = UIWindow(windowScene: windowScen)
+//        window.rootViewController = PoketBookController()
+//        window.makeKeyAndVisible()
+//        self.window = window
+//
+        //self window에 uiwindow를 넣어준다.
+        self.window = UIWindow(windowScene: windowScen)
+        //포켓북 컨트롤러의 인스턴스를 만들고 컬렉션타입은UICollectionViewFlowLayout
+        let poketBookController = PoketBookController(collectionViewLayout: UICollectionViewFlowLayout())
+        //루트뷰 컨트롤러를 선언후 navigation컨트롤러로 루트를 poketbookcontorller로 지정 (루트가 포켓북이됨)
+        let rootViewController = UINavigationController(rootViewController: poketBookController)
+        //윈도우에 루트는 루트컨트롤러이다 라고 선언
+        self.window?.rootViewController = rootViewController
+        //그것을 메이크키앤드 비시블로 적용___???해준다.
+        self.window?.makeKeyAndVisible()
+
+//
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
