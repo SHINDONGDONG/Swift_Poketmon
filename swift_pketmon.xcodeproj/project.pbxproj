@@ -14,6 +14,7 @@
 		9B13F281274705A20070B866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B13F27F274705A20070B866 /* LaunchScreen.storyboard */; };
 		9B13F28A274707550070B866 /* PoketBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13F289274707550070B866 /* PoketBookController.swift */; };
 		9B24574E2749CEA100D76DAC /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24574D2749CEA100D76DAC /* Extenstions.swift */; };
+		9B2457512749DA8F00D76DAC /* PoketmonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2457502749DA8F00D76DAC /* PoketmonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B13F282274705A20070B866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B13F289274707550070B866 /* PoketBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoketBookController.swift; sourceTree = "<group>"; };
 		9B24574D2749CEA100D76DAC /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		9B2457502749DA8F00D76DAC /* PoketmonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoketmonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		9B13F273274705A10070B866 /* swift_pketmon */ = {
 			isa = PBXGroup;
 			children = (
+				9B24574F2749DA8300D76DAC /* Views */,
 				9B24574C2749CE8600D76DAC /* Utils */,
 				9B13F288274706EC0070B866 /* Controllers */,
 				9B13F274274705A10070B866 /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				9B24574D2749CEA100D76DAC /* Extenstions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9B24574F2749DA8300D76DAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B2457502749DA8F00D76DAC /* PoketmonCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B24574E2749CEA100D76DAC /* Extenstions.swift in Sources */,
+				9B2457512749DA8F00D76DAC /* PoketmonCell.swift in Sources */,
 				9B13F28A274707550070B866 /* PoketBookController.swift in Sources */,
 				9B13F275274705A10070B866 /* AppDelegate.swift in Sources */,
 				9B13F277274705A10070B866 /* SceneDelegate.swift in Sources */,

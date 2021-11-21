@@ -6,8 +6,10 @@
 //
 
 import UIKit
+//PoketmonCell을 불러오기 위해서는 선언을 해주어야한다.
+let reuseableIdentifier = "poketbookCell"
 
-private let reuseIdentifier = "Cell"
+
 
 class PoketBookController: UICollectionViewController {
 
@@ -61,6 +63,38 @@ class PoketBookController: UICollectionViewController {
             UIBarButtonItem.SystemItem.search, target: self, action: #selector(searchTapped))
         adjustColor()
         
+        //콜렉션 뷰 레지스터로 poketmoncell.self 로 불러오고 reuseableIdentifier를 선언해준다.
+        collectionView.register(PoketmonCell.self, forCellWithReuseIdentifier: reuseableIdentifier)
+        
     }
 
 }
+
+//Mark: collectionViewcell delegate functions
+extension PoketBookController {
+    //몇개의 아이템을 보여줄것인지 ? numberOfItemsInSection
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    //cell에 어떠한 데이터를 보여줄것인지. cellForItemAt
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseableIdentifier, for: indexPath) as! PoketmonCell
+        return cell
+    }
+}
+
+//Mark: UICollectionviewDelegateFlowLayout delegate functions
+extension PoketBookController: UICollectionViewDelegateFlowLayout {
+    //cell 하나당의 사이즈를 정해준다. sizeForItemAt
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (view.frame.width - 36) / 3
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 30, left: 8, bottom: 8, right: 8)
+    }
+    
+}
+
